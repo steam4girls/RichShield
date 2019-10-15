@@ -36,6 +36,7 @@ void loop()
   float celsius;
   celsius = temper.getTemperature();//get temperature
   displayTemperature((int8_t)celsius);//
+  Serial.println((int8_t)celsius);
   delay(1000);//delay 1000ms
 }
 /************************************************* *********************/
@@ -46,7 +47,6 @@ void loop()
 void displayTemperature(int8_t temperature)
 {
   int8_t temp[4];
-  Serial.println(temperature);
   if(temperature < 0)
 	{
 		temp[0] = INDEX_NEGATIVE_SIGN;
@@ -59,7 +59,6 @@ void displayTemperature(int8_t temperature)
 	temp[2] = temperature % 10;
 	temp[3] = 12;	          //index of 'C' for celsius degree symbol.
 	disp.display(temp);
- 
 }
 /*********************************************************************************************************
 The end of file
