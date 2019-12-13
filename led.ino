@@ -9,9 +9,6 @@
 *
 ************************************************** *******************************************************/
 
-#include <Wire.h>
-#include "RichShieldLED.h"
-
 #define LED_AMARELO  7
 #define LED_VERDE    6
 #define LED_AZUL     5
